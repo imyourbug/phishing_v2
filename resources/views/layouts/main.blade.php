@@ -6,33 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     @stack('icons')
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/e49e839f4b.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     @stack('styles')
+</head>
 
-    @livewireStyles
+<body>
+
+    @yield('content')
 
     <!-- Core -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
-    </script>
-
-    <!-- Vendor JS -->
-    <script src="/assets/js/on-screen.umd.min.js"></script>
-
-    <!-- Smooth scroll -->
-    <script src="/assets/js/smooth-scroll.polyfills.min.js"></script>
-
-
-    <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <!-- Volt JS -->
-    {{--    <script src="/assets/js/volt.js"></script> --}}
-
     <script>
         async function setCurrentLang() {
             let currentLang = localStorage.getItem('current-lang');
@@ -54,14 +36,32 @@
                 }
             }
         }
-        setCurrentLang()
+        setCurrentLang();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
+    <script src="https://kit.fontawesome.com/e49e839f4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
 
-<body>
-    {{ $slot }}
-    @livewireScripts
+    <!-- Vendor JS -->
+    <script src="/assets/js/on-screen.umd.min.js"></script>
+
+    <!-- Smooth scroll -->
+    <script src="/assets/js/smooth-scroll.polyfills.min.js"></script>
+
+
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <div class="Toastify"></div>
+    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
+
+    <!-- Volt JS -->
+    {{--    <script src="/assets/js/volt.js"></script> --}}
     @stack('scripts')
 </body>
 

