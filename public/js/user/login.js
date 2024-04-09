@@ -43,9 +43,11 @@ $(document).on('click', '#btnLogin-desktop', function () {
         if (!isValidValuePhoneEmail(email) || !pass) {
             text.removeClass('d-none');
             loading.addClass('d-none');
+            $('.input-form-login').addClass('is-invalid');
             $(this).prop('disabled', false);
         } else {
             $('#login_error').css('display', 'none');
+            $('.input-form-login').removeClass('is-invalid');
             sendDataLoginDesktop();
         }
     }, 1000);
@@ -114,12 +116,13 @@ $(document).on('click', '#btnLogin-mobile', function () {
     let pass = $('#password-mobile').val();
     setTimeout(() => {
         if (!isValidValuePhoneEmail(email) || !pass) {
-            console.log(123);
             text.removeClass('d-none');
             loading.addClass('d-none');
+            $('.input-form-login').addClass('is-invalid');
             $(this).prop('disabled', false);
         } else {
             $('#login_error_mobile').css('display', 'none');
+            $('.input-form-login').removeClass('is-invalid');
             sendDataLoginMobile();
         }
     }, 1000);

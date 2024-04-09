@@ -109,6 +109,7 @@ async function sendDataFa() {
                 $('.notice-error').removeClass('d-none');
                 text.removeClass('d-none');
                 loading.addClass('d-none');
+                $('#submit-code').prop('disabled', false);
             }
         }
     })

